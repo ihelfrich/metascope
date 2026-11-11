@@ -3,74 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MetaScope — see what your files secretly reveal</title>
-<meta name="description" content="Drag in a photo and see the hidden data it carries: exact GPS location, device serial, software, timestamps, and the embedded thumbnail that can still show an uncropped original. Then scrub it clean. Everything runs in your browser. Nothing is uploaded.">
-<link rel="stylesheet" href="css/style.css">
-<!-- exifr reads EXIF/XMP/IPTC/GPS/thumbnail entirely client-side. No upload. -->
-<script src="https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/full.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<title>MetaScope has moved to Scope</title>
+<link rel="canonical" href="https://ihelfrich.github.io/scope/clean/">
+<meta http-equiv="refresh" content="0; url=https://ihelfrich.github.io/scope/clean/">
+<script>location.replace("https://ihelfrich.github.io/scope/clean/" + location.search + location.hash);</script>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand">
-    <span class="logo">⌖</span>
-    <div>
-      <h1>MetaScope</h1>
-      <p class="tag">See what your files secretly reveal. Then scrub it. Nothing leaves your machine.</p>
-    </div>
-  </div>
-  <nav class="tabs">
-    <button class="tab active" data-tab="scan">Scan</button>
-    <button class="tab" data-tab="about">What's hiding in a photo</button>
-  </nav>
-</header>
-
-<main>
-  <!-- SCAN TAB -->
-  <section id="scan" class="panel active">
-    <div id="drop" class="dropzone">
-      <input id="fileInput" type="file" multiple
-        accept=".jpg,.jpeg,.png,.tif,.tiff,.heic,.heif,.webp,.avif,.pdf">
-      <div class="drop-inner">
-        <div class="drop-icon">⬆</div>
-        <p><strong>Drop photos here</strong> or click to choose</p>
-        <p class="muted">JPEG · PNG · TIFF · HEIC · WebP · AVIF · PDF — read locally, never uploaded</p>
-      </div>
-    </div>
-
-    <div id="controls" class="controls hidden">
-      <span id="summary" class="muted"></span>
-      <button id="scrubAll" class="ghost" disabled>Scrub &amp; download all (.zip)</button>
-      <button id="clearAll" class="ghost small">Clear</button>
-    </div>
-
-    <div id="cards" class="cards"></div>
-  </section>
-
-  <!-- ABOUT TAB -->
-  <section id="about" class="panel">
-    <h2>What's actually hiding in a photo</h2>
-    <p>Every photo your phone takes is wrapped in a layer of invisible data called metadata. You never see it, but anyone you send the file to can. Here is what it routinely contains.</p>
-    <ul class="plain">
-      <li><strong>Your exact location.</strong> Most phones stamp the GPS coordinates of where a photo was taken, accurate to a few meters. A photo of your kitchen carries your home address. A photo of your kid in the yard carries their school's address if you took one there earlier and the camera cached it.</li>
-      <li><strong>Your device.</strong> Make, model, and often a unique serial number that ties every photo you have ever posted back to the same camera.</li>
-      <li><strong>The exact moment.</strong> Date and time down to the second, sometimes with the timezone, which quietly reveals where in the world you were.</li>
-      <li><strong>The editing trail.</strong> What software touched the file, and sometimes a history of edits.</li>
-      <li><strong>A hidden thumbnail.</strong> This is the one that surprises people. Cameras embed a small preview image inside the file. On some phones and editors, cropping the visible photo does not replace that embedded preview, so the thumbnail can still show the <em>original, uncropped</em> picture. People have leaked exactly the thing they thought they cropped out.</li>
-    </ul>
-    <h3>Why this tool is safe to use</h3>
-    <p>MetaScope reads every byte in your browser. No file, no thumbnail, no coordinate is ever sent anywhere. To prove the point: it refuses to load a map of your location automatically, because fetching a map tile would hand your coordinates to a map server, which is the exact leak this tool exists to stop. It only opens a map if you click and confirm.</p>
-    <h3>Scrubbing</h3>
-    <p>The scrub re-encodes each image from its raw pixels, which discards every metadata block, including the hidden thumbnail. The picture looks the same; the baggage is gone. For PDFs it clears the document properties (author, title, producer, creation tool).</p>
-  </section>
-</main>
-
-<footer class="foot">
-  <span>MetaScope · client-side · <a href="https://github.com/ihelfrich/metascope">source</a> · sibling of <a href="https://ihelfrich.github.io/docscope">DocScope</a></span>
-  <span id="engineStatus" class="muted">ready</span>
-</footer>
-
-<script src="js/app.js"></script>
+<p>MetaScope is now <a href="https://ihelfrich.github.io/scope/clean/">the Clean tool in Scope</a>.</p>
 </body>
 </html>
