@@ -1,5 +1,7 @@
 # MetaScope
 
+> **Moved.** MetaScope is now the the Clean tool tool in [Scope](https://github.com/ihelfrich/scope) and lives at https://ihelfrich.github.io/scope/clean/. This repository is kept so old links redirect; development continues in `scope/clean/`.
+
 See what your files secretly reveal, then scrub it clean. Drag in a photo and MetaScope shows you the hidden data your camera wrote into it: the exact GPS coordinates of where it was taken, your device's make, model, and serial number, the timestamp, the editing software, and the embedded thumbnail that can still contain the original uncropped image. One click strips all of it. Everything runs in your browser. No file, coordinate, or thumbnail is ever uploaded.
 
 **Live:** https://ihelfrich.github.io/metascope
